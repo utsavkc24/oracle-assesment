@@ -1,0 +1,5 @@
+package com.librarymanagment.Library.repository;
+
+public class BookRepository {
+
+}

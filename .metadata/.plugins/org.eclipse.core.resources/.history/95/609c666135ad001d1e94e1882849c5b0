@@ -1,0 +1,39 @@
+package com.librarymanagment.Library.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.librarymanagment.Library.model.Book;
+import com.librarymanagment.Library.repository.BookRepository;
+
+public class BookService implements BookServiceInterface {
+
+	private BookRepository bookRepository;
+
+	@Override
+	public void add(Book book) {
+
+	}
+
+	@Override
+	public List<Book> getAllBooks() {
+		return null;
+
+	}
+
+	@Override
+	public Optional<Book> getBookById(int id) {
+		return null;
+
+	}
+
+	@Override
+	public void update(Book book) {
+
+	}
+
+	@Override
+	public void deleteBookById(int id) {
+
+	}
+}

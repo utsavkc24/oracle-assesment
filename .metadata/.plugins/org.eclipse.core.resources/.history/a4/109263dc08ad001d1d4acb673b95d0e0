@@ -1,0 +1,8 @@
+package com.librarymanagment.Library.repository;
+
+
+import com.librarymanagment.Library.model.Book;
+
+public class BookRepository {
+
+}

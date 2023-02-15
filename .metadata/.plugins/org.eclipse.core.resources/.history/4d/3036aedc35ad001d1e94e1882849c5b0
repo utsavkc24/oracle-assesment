@@ -1,0 +1,11 @@
+package com.librarymanagment.Library.repository;
+
+import java.util.HashMap;
+
+import com.librarymanagment.Library.model.Book;
+
+public class BookRepository {
+
+	HashMap<Integer, Book> db;
+	
+}

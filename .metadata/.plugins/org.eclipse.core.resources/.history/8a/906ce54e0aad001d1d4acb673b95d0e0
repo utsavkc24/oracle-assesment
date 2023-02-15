@@ -1,0 +1,14 @@
+package com.librarymanagment.Library;
+
+import java.util.HashMap;
+
+import com.librarymanagment.Library.repository.BookRepository;
+
+public class LibraryApplication {
+
+	public static void main(String[] args) {
+		BookRepository bookRepository = new BookRepository(new HashMap<>());
+		
+	}
+
+}

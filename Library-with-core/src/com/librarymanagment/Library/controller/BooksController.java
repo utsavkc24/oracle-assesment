@@ -1,0 +1,33 @@
+package com.librarymanagment.Library.controller;
+
+import java.util.List;
+
+import com.librarymanagment.Library.exception.BookNotFoundException;
+import com.librarymanagment.Library.model.Book;
+import com.librarymanagment.Library.service.BookService;
+
+public class BooksController {
+
+	BookService service = new BookService();
+
+	public void addBook(Book book) {
+		service.add(book);
+	}
+
+	public List<Book> getAllBooks() {
+		return service.getAllBooks();
+	}
+
+	public Book getBookById(int id) {
+		Book book = service.getBookById(id);
+
+		if (book == null)
+			throw new BookNotFoundException("id-" + id);
+
+		return book;
+	}
+
+	public void deleteBookById(int id) {
+
+	}
+}

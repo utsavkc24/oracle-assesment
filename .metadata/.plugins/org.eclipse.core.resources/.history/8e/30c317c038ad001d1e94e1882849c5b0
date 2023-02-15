@@ -1,0 +1,26 @@
+package com.librarymanagment.Library;
+
+import java.util.HashMap;
+
+import com.librarymanagment.Library.controller.BooksController;
+import com.librarymanagment.Library.model.Book;
+import com.librarymanagment.Library.repository.BookRepository;
+import com.librarymanagment.Library.service.BookService;
+
+public class LibraryApplication {
+
+	public static void main(String[] args) {
+		BookRepository bookRepository = new BookRepository(new HashMap<>());
+		HashMap<Integer, Book> db = bookRepository.getDb();
+		
+		db.put(1, new Book("Atomic Habits", "James Clear"));
+		
+		BookService bookService = new BookService();
+		bookService.setDB(bookRepository);
+		
+		BooksController booksController = new BooksController();
+		booksController.addBook(new Book("Wings of fire", "APJ Abdul Kalam"));
+		booksController.getAllBooks();
+	}
+
+}

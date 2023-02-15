@@ -1,0 +1,50 @@
+package com.librarymanagment.Library.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import com.librarymanagment.Library.model.Book;
+import com.librarymanagment.Library.repository.BookRepository;
+
+public class BookService implements BookServiceInterface {
+
+	private BookRepository bookRepository;
+	private HashMap<Integer, Book> db;
+	private int ID = 1;
+
+	@Override
+	public void add(Book book) {
+		db.put(ID, book);
+		ID++;
+	}
+
+	@Override
+	public List<Book> getAllBooks() {
+		return db.values().stream().collect(Collectors.toList());
+
+	}
+
+	@Override
+	public Optional<Book> getBookById(int id) {
+		return null;
+
+	}
+
+	@Override
+	public void update(Book book) {
+
+	}
+
+	@Override
+	public void deleteBookById(int id) {
+
+	}
+
+
+	public void setDB(BookRepository bookRepository) {
+		this.bookRepository = bookRepository;
+		db = bookRepository.getDb();
+	}
+}

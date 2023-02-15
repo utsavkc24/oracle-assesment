@@ -1,0 +1,23 @@
+package com.librarymanagment.Library.repository;
+
+import java.util.HashMap;
+
+import com.librarymanagment.Library.model.Book;
+
+public class BookRepository {
+
+	private static HashMap<Integer, Book> db = null;
+
+	private BookRepository() {
+	}
+
+
+	public static HashMap<Integer, Book> getDBInstance(){
+		if(db == null) {
+			db = new HashMap<>();
+		}
+		return db;
+	}
+	
+	
+}

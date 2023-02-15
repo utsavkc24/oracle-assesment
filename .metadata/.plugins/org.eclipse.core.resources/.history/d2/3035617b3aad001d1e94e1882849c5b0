@@ -1,0 +1,18 @@
+package com.librarymanagment.Library;
+
+import java.util.HashMap;
+
+import com.librarymanagment.Library.controller.BooksController;
+import com.librarymanagment.Library.model.Book;
+import com.librarymanagment.Library.repository.BookRepository;
+import com.librarymanagment.Library.service.BookService;
+
+public class LibraryApplication {
+
+	public static void main(String[] args) {
+		BooksController booksController = new BooksController();
+		booksController.addBook(new Book("Wings of fire", "APJ Abdul Kalam"));
+		System.out.println(booksController.getAllBooks());
+	}
+
+}

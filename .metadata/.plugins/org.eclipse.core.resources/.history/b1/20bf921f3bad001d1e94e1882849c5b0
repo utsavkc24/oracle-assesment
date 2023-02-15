@@ -1,0 +1,14 @@
+package com.librarymanagment.Library;
+
+import com.librarymanagment.Library.controller.BooksController;
+import com.librarymanagment.Library.model.Book;
+
+public class LibraryApplication {
+
+	public static void main(String[] args) {
+		BooksController booksController = new BooksController();
+		booksController.addBook(new Book("Wings of fire", "APJ Abdul Kalam"));
+		System.out.println(booksController.getAllBooks());
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.librarymanagment.Library;
+
+import com.librarymanagment.Library.controller.BooksController;
+import com.librarymanagment.Library.model.Book;
+
+public class LibraryApplication {
+
+	public static void main(String[] args) {
+		BooksController booksController = new BooksController();
+		booksController.addBook(new Book(1, "Wings of fire", "APJ Abdul Kalam"));
+		booksController.addBook(new Book(2, "Atomic Habits", "James clear"));
+		booksController.addBook(new Book(2, "Atomic Habits - REVISED", "James clear"));// Update
+
+		System.out.println(booksController.getAllBooks());
+		System.out.println(booksController.getBookById(2));
+		System.out.println(booksController.getBookById(3));
+	}
+
+}
